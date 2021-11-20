@@ -3,7 +3,7 @@ from flask import *
 def create_app():
     app = Flask(__name__)
     #
-    from .views import bp
-    app.register_blueprint(bp)
+    from . import views
+    app.register_blueprint(views.bp)
     #
     return app
