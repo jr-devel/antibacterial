@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="x; y">
+    <meta name="description" content="Description of service">
+    <title>{% block title %}{% endblock %} | NombreEmpresa</title>
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/897a6024ea.js" crossorigin="anonymous"></script>
+    <!-- MODERNIZR -->
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+    <!-- NORMALIZE -->
+    <link rel="preload" href="{{ url_for('static', filename='css/normalize.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="preload" href="{{ url_for('static', filename='css/style.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        {% include 'navbar.html' %}
+    </div>
+    {% block content %}{% endblock %}
+    <footer class="footer">
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>
