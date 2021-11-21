@@ -16,7 +16,7 @@ html {
   /* - */
   font-size: 62.5%;
   /**/
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -60,10 +60,8 @@ a {text-decoration: none; color: #000; font-family: var(--text-sm);}
   border-radius: 5px;
   background-color: #000000;
 }
-/* NavBar */
+/********************************************** NavBar **********************************************/
 .navbar {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   background-image: url(../img/banner.jpg);
   background-position: center left;
   background-repeat: no-repeat;
@@ -149,10 +147,9 @@ a {text-decoration: none; color: #000; font-family: var(--text-sm);}
   .navbar__header__links--item:last-of-type  {border-bottom-right-radius: 0}
 }
 
-/* Content */
+/********************************************** Content **********************************************/
 .content {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  width: auto;
 }
 .container {
   width: min(90%, 120em);
@@ -191,10 +188,8 @@ a {text-decoration: none; color: #000; font-family: var(--text-sm);}
       grid-template-columns: 1fr;
     }
 }
-/* Footer */
+/********************************************** Footer **********************************************/
 .footer {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   background-color: #333;
   height: 98vh;
   max-width: 1500px;
